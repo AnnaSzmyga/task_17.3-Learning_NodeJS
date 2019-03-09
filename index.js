@@ -1,6 +1,6 @@
 
 process.stdin.setEncoding('utf-8');
-var OSinfo = require('../modules/OSinfo');
+var OSinfo = require('./modules/OSinfo');
 
 process.stdin.on('readable', function() {
     // metoda .read() ma za zadanie odczytać co użytkownik podał na wejściu

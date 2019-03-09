@@ -1,5 +1,5 @@
 var os = require('os');
-var uptime = require('../modules/uptime');
+var time = require('../modules/time');
 
 function getOSinfo() {
     var type = os.type();
@@ -11,10 +11,11 @@ function getOSinfo() {
     var release = os.release();
     var cpu = os.cpus()[0].model;
     var userInfo = os.userInfo();
+    var uptime = os.uptime();
     console.log('System:', type);
     console.log('Release:', release);
     console.log('CPU model:', cpu);
-    uptime.getUptime();
+    console.log('Uptime:', time.changeTimeFormat(uptime));
     console.log('User name:', userInfo.username);
     console.log('Home dir:', userInfo.homedir);
 };
